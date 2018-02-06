@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar text-center color="primary">
+		<ion-title>Write Note</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<div>
+		<table style="width: 100%">
+			<tr style="border: solid 0.8px">
+				<th><b style="width: 10%; height: 12%;">Title :</b></th>
+				<th><input  [(ngModel)]="todo.title" value="tyss" type= "text" style="height: 12%; width: 100%; color: #7FA1BA; border: solid 0.8px "></th>
+			</tr>
+		</table>
+	</div>
+	<textarea [(ngModel)]="todo.disp" maxLength="500" style="width: 100%; height: 96%; min-height: 96%; color: #07395C; background-color: #5FA259" ></textarea>
+</ion-content>
+<ion-footer>
+	<ion-navbar text-center color="primary">
+			<button (click)=test() style="height: 100%; width:100%; background-color: #38AA2E;">	
+				<h3><b>SUBMIT</b></h3>
+			</button>
+	</ion-navbar>
+</ion-footer>

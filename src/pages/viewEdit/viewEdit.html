@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-navbar text-center color="primary">
+		<ion-title>{{title | uppercase}}</ion-title>	
+	</ion-navbar>
+</ion-header>
+<ion-content>
+	<div>
+		<table style="width: 100%">
+			<tr style="border: solid 0.8px">
+			</tr>
+		</table>
+	</div>
+	<div style="float: right; background-color: #2A7B23">	
+		<tr>
+			<th>
+				<button style="height: 10%; min-height: 10%;" (click)="edit()" *ngIf = "!isEditable">
+					<p>Edit</p>
+				</button>
+				<button style="height: 10%; min-height: 10%;" (click)="save()" *ngIf = "isEditable">
+					<p>save</p>
+				</button>
+			</th>
+			<th>
+				<button style="height: 10%; min-height: 10%;" (click)="delete()">
+					<p>Delete</p>
+				</button>
+			</th>
+		</tr>
+	</div>
+	<b><textarea maxLength="500" style="width: 100%; height: 92%; min-height: 92%; color: #07395C; background-color: #5FA259" readonly="true" *ngIf = "!isEditable">{{descp}}</textarea></b>
+	<b><textarea maxLength="500" [(ngModel)]="newDesc" style="width: 100%; height: 92%; min-height: 92%; color: #07395C; background-color: #5FA259" *ngIf = "isEditable">{{newDesc}}</textarea></b>
+</ion-content>
